@@ -135,7 +135,7 @@
       <div class="grid grid-cols-3 gap-2 text-center text-xs font-semibold">
         <div id="stepTab1" class="py-2 px-3 rounded-lg bg-brandNavy-100 text-brandNavy-900 border border-brandNavy-600 flex items-center justify-center gap-2">
           <span class="w-5 h-5 rounded-full bg-brandNavy-800 text-white flex items-center justify-center text-xs">1</span>
-          <span>Visit & Inmate Details</span>
+          <span>Visit & Prisoner Details</span>
         </div>
         <div id="stepTab2" class="py-2 px-3 rounded-lg bg-slate-100 text-slate-500 border border-slate-200 flex items-center justify-center gap-2">
           <span class="w-5 h-5 rounded-full bg-slate-300 text-slate-700 flex items-center justify-center text-xs">2</span>
@@ -153,7 +153,7 @@
       <div>
         <h2 class="text-base sm:text-lg font-bold text-slate-900 flex items-center gap-2">
           <i class="ph-bold ph-identification-card text-brandNavy-700 text-xl"></i>
-          Step 1: Your Details & Inmate Information
+          Step 1: Your Details & Prisoner Information
         </h2>
         <p class="text-xs sm:text-sm text-slate-500 mt-0.5">Please provide visitor contact details and reason for visit.</p>
       </div>
@@ -227,19 +227,19 @@
 
         <div class="border-t border-slate-200 md:col-span-2 my-1"></div>
 
-        <!-- Inmate Full Name -->
+        <!-- Prisoner Full Name -->
         <div>
           <label class="block font-semibold text-slate-700 mb-1">
-            Inmate / Prisoner Full Name <span class="text-rose-500">*</span>
+            Prisoner Full Name <span class="text-rose-500">*</span>
           </label>
           <input type="text" id="inmateName" placeholder="e.g. Johnathan Smith"
             class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brandNavy-600 outline-none transition">
         </div>
 
-        <!-- Inmate ID / DOB (Optional) -->
+        <!-- Prisoner ID / DOB (Optional) -->
         <div>
           <label class="block font-semibold text-slate-700 mb-1">
-            Inmate ID Number or DOB (If known)
+            Prisoner ID Number or DOB (If known)
           </label>
           <input type="text" id="inmateId" placeholder="e.g. E12345 or Date of Birth if ID unknown"
             class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brandNavy-600 outline-none transition">
@@ -501,13 +501,13 @@
             <div><span class="text-slate-500">Co-Visitors:</span> <span id="dosCoVisitors">None specified</span></div>
           </div>
 
-          <!-- Box 2: Inmate & Attendance Details -->
+          <!-- Box 2: Prisoner & Attendance Details -->
           <div class="p-4 rounded-lg bg-slate-50 border border-slate-200 space-y-1.5">
             <div class="text-xs font-bold uppercase tracking-wider text-brandNavy-800 mb-1 flex items-center gap-1.5">
-              <i class="ph-bold ph-identification-badge"></i> Inmate & Visit Schedule
+              <i class="ph-bold ph-identification-badge"></i> Prisoner & Visit Schedule
             </div>
-            <div><span class="text-slate-500">Inmate Name:</span> <strong id="dosInmateName" class="text-slate-800">--</strong></div>
-            <div><span class="text-slate-500">Inmate TOMS ID / DOB:</span> <span id="dosInmateId">--</span></div>
+            <div><span class="text-slate-500">Prisoner Name:</span> <strong id="dosPrisonerName" class="text-slate-800">--</strong></div>
+            <div><span class="text-slate-500">Prisoner TOMS ID / DOB:</span> <span id="dosPrisonerId">--</span></div>
             <div><span class="text-slate-500">Reason / Purpose:</span> <strong id="dosVisitReason" class="text-slate-800">--</strong></div>
             <div><span class="text-slate-500">Proposed Visit Date:</span> <strong id="dosVisitDate" class="text-slate-800">--</strong></div>
             <div><span class="text-slate-500">Intended Frequency:</span> <span id="dosVisitFrequency">--</span></div>
@@ -941,8 +941,8 @@
       document.getElementById('dosVisitorABN').innerText = state.visitorABN;
       document.getElementById('dosCoVisitors').innerText = state.coVisitors;
 
-      document.getElementById('dosInmateName').innerText = state.inmateName;
-      document.getElementById('dosInmateId').innerText = state.inmateId;
+      document.getElementById('dosPrisonerName').innerText = state.inmateName;
+      document.getElementById('dosPrisonerId').innerText = state.inmateId;
       document.getElementById('dosVisitReason').innerText = state.visitReason;
       document.getElementById('dosVisitDate').innerText = state.visitDate;
       document.getElementById('dosVisitFrequency').innerText = state.visitFrequency;
@@ -983,7 +983,7 @@ Generated: ${new Date().toLocaleString()}
 • Accompanying: ${state.coVisitors}
 
 2. INMATE DETAILS:
-• Inmate: ${state.inmateName} (ID: ${state.inmateId})
+• Prisoner: ${state.inmateName} (ID: ${state.inmateId})
 • Visit Purpose: ${state.visitReason}
 • Intended Frequency: ${state.visitFrequency}
 
